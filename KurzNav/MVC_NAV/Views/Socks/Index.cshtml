@@ -6,9 +6,29 @@
 @{
 }
 <h1> Ponožky  </h1>
-@foreach (var sock in Model)
-{
-    <p>
-        @sock.Brand - @sock.Size - @sock.Price - @sock.OnStock
-    </p>
-}
+<table>
+    <thead>
+        <tr>
+            <th style="width: 150px;border: 1px solid black;">Brand</th>
+            <th style="width: 50px;border: 1px solid black;">Size</th>
+            <th style="width: 50px;border: 1px solid black;">Price</th>
+            <th style="width: 60px;border: 1px solid black;">On Stock</t>
+            <th style="width: 50px;border: 1px solid black;">Detail</th>
+        </tr>
+    </thead>
+    @foreach (var sock in Model)
+    {
+        <tr>
+
+            <td style="border: 1px solid black;">@sock.Brand</td>
+            <td style="border: 1px solid black;">@sock.Size</td>
+            <td style="border: 1px solid black;">@sock.Price</td>
+            <td style="border: 1px solid black;"> @sock.OnStock</td>
+            <td style="border: 1px solid black;">
+                <a href="@Url.Action("GetById", "Socks", new { id = sock.Id })">
+                    Detail
+                </a>
+            </td>
+        </tr>
+    }
+</table>

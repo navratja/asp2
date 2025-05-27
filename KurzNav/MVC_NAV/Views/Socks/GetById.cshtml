@@ -1,0 +1,29 @@
+﻿@model Socks
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Detail ponožky</h1>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 150px;border: 1px solid black;">Id</th>
+            <th style="width: 150px;border: 1px solid black;">Brand</th>
+            <th style="width: 50px;border: 1px solid black;">Size</th>
+            <th style="width: 50px;border: 1px solid black;">Price</th>
+            <th style="width: 60px;border: 1px solid black;">On Stock</th>            
+        </tr>
+    </thead>
+    <tr>        
+        <td style="border: 1px solid black;">@Model.Id</td>
+        <td style="border: 1px solid black;">@Model.Brand</td>
+        <td style="border: 1px solid black;">@Model.Size</td>
+        <td style="border: 1px solid black;">@Model.Price</td>
+        <td style="border: 1px solid black;"> @Model.OnStock</td>    
+   
+    </tr>
+</table>
+
+
